@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class SpinPropeller : MonoBehaviour
 {
-  Vector3 propellerRotation = new Vector3();
-
   // Start is called before the first frame update
   void Start()
   {
