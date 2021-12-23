@@ -1922,8 +1922,8 @@ GameObject:
   - component: {fileID: 3904075086018532115}
   - component: {fileID: 1392999416727970129}
   m_Layer: 0
-  m_Name: Animal_Cow_White
-  m_TagString: Untagged
+  m_Name: Cow
+  m_TagString: Animal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1974,7 +1974,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e60481b012f76d542ac7e98a8c2319f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 7
+  speed: 3
 --- !u!114 &-8921463086835911134
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2010,8 +2010,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 12.254238, y: 33.76913, z: 49.089493}
+  m_Center: {x: 0.0000052981904, y: 16.384565, z: -0.07146199}
 --- !u!54 &1392999416727970129
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 3954191870444658771}
   m_Layer: 0
   m_Name: Food_Pizza_01
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -134,8 +134,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.4597009, y: 0.13234863, z: 0.55363166}
-  m_Center: {x: 0, y: 0, z: -0.0000001937151}
+  m_Size: {x: 0.67006254, y: 0.13234863, z: 0.7611886}
+  m_Center: {x: 0.0014024576, y: 0, z: -0.007012169}
 --- !u!54 &3954191870444658771
 Rigidbody:
   m_ObjectHideFlags: 0
