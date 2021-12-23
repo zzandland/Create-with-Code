@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class DetectCollisions : MonoBehaviour
 {
+  private GameObject engineObject;
+  private GameEngine engineScript;
   // Start is called before the first frame update
   void Start()
   {
-
+    engineObject = GameObject.Find("GameEngine");
+    engineScript = engineObject.GetComponent<GameEngine>();
   }
 
   // Update is called once per frame
@@ -22,11 +25,22 @@ public class DetectCollisions : MonoBehaviour
     {
       Destroy(gameObject);
       Destroy(other.gameObject);
+      ++engineScript.score;
+      engineScript.LogStatus();
     }
     else if (gameObject.CompareTag("Player") && other.gameObject.CompareTag("Aggressive"))
     {
-      Destroy(gameObject);
-      Debug.Log("Game Over!");
+      if (engineScript.playerLives > 1)
+      {
+        Destroy(other.gameObject);
+        --engineScript.playerLives;
+        engineScript.LogStatus();
+      }
+      else
+      {
+        Destroy(gameObject);
+        Debug.Log("Game Over!");
+      }
     }
   }
 }

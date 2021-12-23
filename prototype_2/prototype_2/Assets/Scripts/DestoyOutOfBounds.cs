@@ -7,10 +7,13 @@ public class DestoyOutOfBounds : MonoBehaviour
   private float topBound = 30;
   private float bottomBound = -10;
   private float horizontalBound = 23;
+  private GameObject engineObject;
+  private GameEngine engineScript;
   // Start is called before the first frame update
   void Start()
   {
-
+    engineObject = GameObject.Find("GameEngine");
+    engineScript = engineObject.GetComponent<GameEngine>();
   }
 
   // Update is called once per frame
@@ -22,9 +25,17 @@ public class DestoyOutOfBounds : MonoBehaviour
     }
     else if (transform.position.z < bottomBound)
     {
-      Debug.Log("Game Over!");
+      if (engineScript.playerLives > 1)
+      {
+        --engineScript.playerLives;
+        engineScript.LogStatus();
+      }
+      else
+      {
+        Debug.Log("Game Over!");
+        Destroy(GameObject.FindGameObjectWithTag("Player"));
+      }
       Destroy(gameObject);
-      Destroy(GameObject.FindGameObjectWithTag("Player"));
     }
   }
 }
